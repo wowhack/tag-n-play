@@ -7,6 +7,7 @@
   "author": "Sebastian Sandberg, Victor Larsson, Simon Arneson & Robin Sveningsson",
   "dependencies": {
     "express": "latest",
+    "ejs": "~0.8.5",
     "mongoose": "latest",
     "passport": "latest",
     "passport-spotify": "latest",
@@ -17,6 +18,9 @@
     "body-parser": "~1.0.0",
     "cookie-parser": "~1.0.0",
     "method-override": "~1.0.0",
-    "express-session": "~1.0.0"
+    "express-session": "~1.0.0",
+    "util": "latest",
+    "yarm": "latest",
+    "mongodb": "latest"
   }
 }

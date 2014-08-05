@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Tag-n-play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/master.css">
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='snapDrawers'>
+        <div class="snapDrawer snapDrawerLeft">
+          <div></div>
+        </div>
+        <div class="snapDrawer snapDrawerRight">
+          <div></div>
+        </div>
+    </div>
+    <div id='content'>
+      <div id="header">
+        <div id="toggleWrapper">
+          <div id="toggleButton" onclick="toggle_click()"></div>
+        </div>
+        <div id="logoWrapper">
+          <div id="logoType" class="notSelectable">Tag n'<br>play</div>
+        </div>
+        <div id="menuWrapper">
+          <div id="tagMenuItem" class="menuItem notSelectable" onclick="mode_click(0)"><p onmouseover="mode_mouse_enter(0)" onmouseout="mode_mouse_leave(0)">Tag</p></div>
+          <div id="playMenuItem" class="menuItem notSelectable" onclick="mode_click(1)"><p onmouseover="mode_mouse_enter(1)" onmouseout="mode_mouse_leave(1)">Play</p></div>
+        </div>
+      </div>
+      <div id="centerContainer">
+        <a href="/auth/spotify">login with spotify</a>
+        <div id='workspace'></div>
+      </div>
+    </div>  
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/vendor/snap.js"></script>
+    <script src="/js/drawer.js"></script>
+    <script src="/js/general.js"></script>
+  </body>
+</html>

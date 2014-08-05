@@ -63,11 +63,168 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 5, ../sass/_tag_page.scss */
-body {
-  background-color: white;
+@media only screen {
+  /* line 2, ../sass/_layout.scss */
+  html {
+    background-color: #252725;
+  }
+
+  /* line 6, ../sass/_layout.scss */
+  #content {
+    position: absolute;
+    overflow: auto;
+    z-index: 100;
+    width: 100%;
+  }
+
+  /* line 13, ../sass/_layout.scss */
+  .snapDrawer {
+    z-index: 0;
+    background-color: red;
+  }
+
+  /* line 18, ../sass/_layout.scss */
+  .snapDrawers {
+    position: absolute;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  /* line 26, ../sass/_layout.scss */
+  #centerContainer {
+    float: left;
+    width: 100%;
+  }
+
+  /* line 31, ../sass/_layout.scss */
+  .notSelectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+
+  /* line 41, ../sass/_layout.scss */
+  #header {
+    width: 100%;
+    height: 100px;
+    background-color: #373937;
+    z-index: 100;
+  }
+
+  /* line 47, ../sass/_layout.scss */
+  #toggleWrapper {
+    width: 40px;
+    height: 100px;
+    float: left;
+  }
+
+  /* line 52, ../sass/_layout.scss */
+  #logoWrapper {
+    width: 100px;
+    height: 100px;
+    float: left;
+    text-align: center;
+  }
+
+  /* line 58, ../sass/_layout.scss */
+  #menuWrapper {
+    width: 50%;
+    height: 100px;
+    float: right;
+    margin-right: 40px;
+  }
+
+  /* line 64, ../sass/_layout.scss */
+  #logoType {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: #ff5900;
+    padding-top: 30px;
+  }
+
+  /* line 70, ../sass/_layout.scss */
+  .menuItem {
+    height: 100px;
+    width: 50%;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    float: left;
+  }
+
+  /* line 78, ../sass/_layout.scss */
+  #tagMenuItem {
+    float: left;
+    text-align: right;
+  }
+
+  /* line 82, ../sass/_layout.scss */
+  #tagMenuItem p {
+    margin-right: 10px;
+  }
+
+  /* line 85, ../sass/_layout.scss */
+  #playMenuItem p {
+    margin-left: 10px;
+  }
+
+  /* line 88, ../sass/_layout.scss */
+  #toggleButton {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    background-image: url("img/snapicon.png");
+    background-size: 30px 30px;
+    background-position: 5px 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  /* line 99, ../sass/_layout.scss */
+  .snapDrawerLeft {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 266px;
+    z-index: 0;
+  }
+
+  /* line 108, ../sass/_layout.scss */
+  .snapDrawerRight {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 266px;
+    z-index: 0;
+  }
 }
-/* line 7, ../sass/_tag_page.scss */
-body div {
-  background-color: "#F676F5";
+@media only screen and (min-width: 421px) {
+  /* line 120, ../sass/_layout.scss */
+  #tagMenuItem p {
+    margin-right: 30px;
+  }
+
+  /* line 123, ../sass/_layout.scss */
+  #playMenuItem p {
+    margin-left: 30px;
+  }
+
+  /* line 126, ../sass/_layout.scss */
+  #menuWrapper {
+    width: 220px;
+  }
+}
+@media only screen and (min-width: 721px) {
+  /* line 133, ../sass/_layout.scss */
+  #menuWrapper {
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+  }
 }
