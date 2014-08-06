@@ -15,8 +15,8 @@ var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 var session       = require('express-session');
 
-var yarm = require('yarm');
-require('./app/yarm.js');
+// var yarm = require('yarm');
+// require('./app/yarm.js');
 
 
 // ==== CONFIGS ======
@@ -31,7 +31,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 
 // yarm config
-app.use('/rest',yarm());
+//app.use('/rest',yarm());
 
 require('./config/passport')(passport); //pass passport for configuration
 

@@ -16,9 +16,9 @@
         var settings = {
             element: null,
             dragger: null,
-            disable: 'right',
+            disable: 'none',
             addBodyClasses: true,
-            hyperextensible: true,
+            hyperextensible: false,
             resistance: 0.5,
             flickThreshold: 50,
             transitionSpeed: 0.3,

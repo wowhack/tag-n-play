@@ -3,29 +3,34 @@
         background-color: $first_background;
     }
     
+    body {
+        height: 100%;
+    }
+    
     #content {
         position: absolute;
-        overflow: auto;
+        
         z-index: 100;
         width: 100%;
+        height: 100%;
+        background-color: $second_background;
     }
     
     .snapDrawer {
         z-index: 0;
-        background-color: red;
     }
     
     .snapDrawers {
         position: absolute;
-        background-color: blue;
         width: 100%;
         height: 100%;
         z-index: 0;
     }
     
-    #centerContainer {
-        float: left;
+    #playContainer {
         width: 100%;
+        background-color: $second_background;
+        display: none;
     }
     
     .notSelectable {
@@ -41,13 +46,20 @@
     #header {
         width: 100%;
         height: $header_height;
-        background-color: $second_background;
+        background-color: $first_background;
         z-index: 100;
     }
     #toggleWrapper {
         width: 40px;
         height: $header_height;
         float: left;
+    }
+    #toggleRightWrapper {
+        width: 40px;
+        height: $header_height;
+        float: left;
+        right: 0;
+        position: absolute;
     }
     #logoWrapper {
         width: $header_height;
@@ -59,7 +71,7 @@
         width: 50%;
         height: $header_height;
         float: right;
-        margin-right: 40px;
+        margin-right: 60px;
     }
     #logoType {
         font-family: 'Dancing Script', cursive;
@@ -88,12 +100,12 @@
     #toggleButton {
         width: 40px;
         height: 40px;
-        background-color: blue;
-        background-image: url("img/snapicon.png");
+        background-image: url("../img/snapicon.png");
         background-size: 30px 30px;
         background-position: 5px 5px;
         margin-top: 30px;
         margin-bottom: 30px;
+        float: left;
     }
     
     .snapDrawerLeft {
@@ -102,7 +114,8 @@
         left: 0;
         height: 100%;
         width: 266px;
-        z-index: 0;
+        // z-index: 0;
+        background-color: $third_background;
     }
     
     .snapDrawerRight{
@@ -112,6 +125,7 @@
         height: 100%;
         width: 266px;
         z-index: 0;
+        background-color: $third_background;
     }
 }
 
@@ -125,6 +139,9 @@ and (min-width: 421px) {
     }
     #menuWrapper {
         width: 220px;
+    }
+    #logoWrapper {
+        padding-left: 50px;
     }
 }
 

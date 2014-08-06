@@ -21,14 +21,14 @@ var UserSchema = new Schema( {
   storedPlaylists:           { type:[StoredList.StoredListSchema]}
 } );
 
-UserSchema.getUser = function (req, callback) {
-    if(typeof req.user !== null){
-      callback(null, req.user );
-    }
-    else{
-      callback(null,{message:"not logged in"});
-    }
-};
+// UserSchema.getUser = function (req, callback) {
+//     if(typeof req.user !== null){
+//       callback(null, req.user );
+//     }
+//     else{
+//       callback(null,{message:"not logged in"});
+//     }
+// };
 
 module.exports.UserSchema  = UserSchema;
 //Models

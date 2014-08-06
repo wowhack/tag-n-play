@@ -43,22 +43,27 @@ module.exports = function(passport) {
     function(accessToken, refreshToken, profile, done) {
         
       
-            User.findOne({ 'spotifyID': profile.id }, function (err, user) {
+            User.findOne({ spotifyID: profile.id }, function (err, user) {
                 if (err)
                     return done(err);
                 //if user is found, return him
                 if (user) {
-                    return done(null, user);
+                    user.spotifyToken = accessToken;
+                    user.save(function(err) {
+                            if (err)
+                                throw err;
+                            return done(null, user);
+                        });
                 } else {
                     //if no user is found, create one
                     
                     var newUser = new User();
                     
                     // set the credentials
-                    
+                    newUser.username = profile.id;
                     newUser.spotifyID = profile.id; //use the profile id provided
                     newUser.spotifyToken = accessToken;
-                    
+                    console.log(newUser);
                     newUser.save(function(err) {
                             if (err)
                                 throw err;

@@ -5,12 +5,12 @@ var su        = require( './schema_util.js' );
  * @class TagSchema
  */
 var TagSchema = new Schema( {
-  name:                      { type: String, unique: true, lowercase: true},
+  name:                      { type: String},
   created:                   { type: Date, default: Date.now},
   songs:                     { type: [String]}
 } );
 
 module.exports.TagSchema                  = TagSchema;
 //Models
-exports.Tag = mongoose.model( 'Tag', TagSchema );
+module.exports.Tag = mongoose.model( 'Tag', TagSchema );
 var tag = exports.Tag;

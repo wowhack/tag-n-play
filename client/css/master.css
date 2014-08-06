@@ -66,39 +66,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @media only screen {
   /* line 2, ../sass/_layout.scss */
   html {
-    background-color: #252725;
+    background-color: #050705;
   }
 
   /* line 6, ../sass/_layout.scss */
+  body {
+    height: 100%;
+  }
+
+  /* line 10, ../sass/_layout.scss */
   #content {
     position: absolute;
-    overflow: auto;
     z-index: 100;
     width: 100%;
+    height: 100%;
+    background-color: #373937;
   }
 
-  /* line 13, ../sass/_layout.scss */
+  /* line 19, ../sass/_layout.scss */
   .snapDrawer {
     z-index: 0;
-    background-color: red;
   }
 
-  /* line 18, ../sass/_layout.scss */
+  /* line 23, ../sass/_layout.scss */
   .snapDrawers {
     position: absolute;
-    background-color: blue;
     width: 100%;
     height: 100%;
     z-index: 0;
   }
 
-  /* line 26, ../sass/_layout.scss */
-  #centerContainer {
-    float: left;
+  /* line 30, ../sass/_layout.scss */
+  #playContainer {
     width: 100%;
+    background-color: #373937;
+    display: none;
   }
 
-  /* line 31, ../sass/_layout.scss */
+  /* line 36, ../sass/_layout.scss */
   .notSelectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -109,22 +114,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     cursor: default;
   }
 
-  /* line 41, ../sass/_layout.scss */
+  /* line 46, ../sass/_layout.scss */
   #header {
     width: 100%;
     height: 100px;
-    background-color: #373937;
+    background-color: #050705;
     z-index: 100;
   }
 
-  /* line 47, ../sass/_layout.scss */
+  /* line 52, ../sass/_layout.scss */
   #toggleWrapper {
     width: 40px;
     height: 100px;
     float: left;
   }
 
-  /* line 52, ../sass/_layout.scss */
+  /* line 57, ../sass/_layout.scss */
+  #toggleRightWrapper {
+    width: 40px;
+    height: 100px;
+    float: left;
+    right: 0;
+    position: absolute;
+  }
+
+  /* line 64, ../sass/_layout.scss */
   #logoWrapper {
     width: 100px;
     height: 100px;
@@ -132,15 +146,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     text-align: center;
   }
 
-  /* line 58, ../sass/_layout.scss */
+  /* line 70, ../sass/_layout.scss */
   #menuWrapper {
     width: 50%;
     height: 100px;
     float: right;
-    margin-right: 40px;
+    margin-right: 60px;
   }
 
-  /* line 64, ../sass/_layout.scss */
+  /* line 76, ../sass/_layout.scss */
   #logoType {
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
@@ -148,7 +162,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     padding-top: 30px;
   }
 
-  /* line 70, ../sass/_layout.scss */
+  /* line 82, ../sass/_layout.scss */
   .menuItem {
     height: 100px;
     width: 50%;
@@ -158,73 +172,290 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     float: left;
   }
 
-  /* line 78, ../sass/_layout.scss */
+  /* line 90, ../sass/_layout.scss */
   #tagMenuItem {
     float: left;
     text-align: right;
   }
 
-  /* line 82, ../sass/_layout.scss */
+  /* line 94, ../sass/_layout.scss */
   #tagMenuItem p {
     margin-right: 10px;
   }
 
-  /* line 85, ../sass/_layout.scss */
+  /* line 97, ../sass/_layout.scss */
   #playMenuItem p {
     margin-left: 10px;
   }
 
-  /* line 88, ../sass/_layout.scss */
+  /* line 100, ../sass/_layout.scss */
   #toggleButton {
     width: 40px;
     height: 40px;
-    background-color: blue;
-    background-image: url("img/snapicon.png");
+    background-image: url("../img/snapicon.png");
     background-size: 30px 30px;
     background-position: 5px 5px;
     margin-top: 30px;
     margin-bottom: 30px;
+    float: left;
   }
 
-  /* line 99, ../sass/_layout.scss */
+  /* line 111, ../sass/_layout.scss */
   .snapDrawerLeft {
     position: fixed;
     left: 0;
     height: 100%;
     width: 266px;
-    z-index: 0;
+    background-color: #171917;
   }
 
-  /* line 108, ../sass/_layout.scss */
+  /* line 121, ../sass/_layout.scss */
   .snapDrawerRight {
     position: fixed;
     right: 0;
     height: 100%;
     width: 266px;
     z-index: 0;
+    background-color: #171917;
   }
 }
 @media only screen and (min-width: 421px) {
-  /* line 120, ../sass/_layout.scss */
+  /* line 134, ../sass/_layout.scss */
   #tagMenuItem p {
     margin-right: 30px;
   }
 
-  /* line 123, ../sass/_layout.scss */
+  /* line 137, ../sass/_layout.scss */
   #playMenuItem p {
     margin-left: 30px;
   }
 
-  /* line 126, ../sass/_layout.scss */
+  /* line 140, ../sass/_layout.scss */
   #menuWrapper {
     width: 220px;
   }
+
+  /* line 143, ../sass/_layout.scss */
+  #logoWrapper {
+    padding-left: 50px;
+  }
 }
 @media only screen and (min-width: 721px) {
-  /* line 133, ../sass/_layout.scss */
+  /* line 150, ../sass/_layout.scss */
   #menuWrapper {
     position: absolute;
     left: 50%;
     margin-left: -110px;
   }
+}
+@media only screen {
+  /* line 3, ../sass/_tag_page.scss */
+  #tagContainer {
+    width: 100%;
+    background-color: #373937;
+    display: block;
+  }
+
+  /* line 9, ../sass/_tag_page.scss */
+  #tagBrowseContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* line 14, ../sass/_tag_page.scss */
+  #tagBrowseHeader {
+    height: 120px;
+    width: 100%;
+    top: 0;
+  }
+
+  /* line 20, ../sass/_tag_page.scss */
+  .tagBrowseHeaderBlock {
+    width: 100%;
+    height: 40px;
+    float: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  /* line 31, ../sass/_tag_page.scss */
+  #tagBrowseAllMusic {
+    width: 100%;
+  }
+
+  /* line 35, ../sass/_tag_page.scss */
+  #tagBrowseFooter {
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 4px solid #202220;
+    background-color: #202220;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 49, ../sass/_tag_page.scss */
+  #tagSearch {
+    width: 100%;
+    height: 31px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+  }
+
+  /* line 64, ../sass/_tag_page.scss */
+  #tagBrowseContent {
+    float: left;
+    width: 100%;
+    overflow: auto;
+  }
+
+  /* line 75, ../sass/_tag_page.scss */
+  .tagPageListItem {
+    margin: 10px 10px 10px 10px;
+    color: white;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    width: 27%;
+    border-style: solid;
+    border-color: gray;
+    border-width: 3px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  /* line 90, ../sass/_tag_page.scss */
+  .selected {
+    border-color: #ff5900 !important;
+  }
+
+  /* line 93, ../sass/_tag_page.scss */
+  .tagPageListItemSpan {
+    width: 100%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 721px) {
+  /* line 105, ../sass/_tag_page.scss */
+  #tagBrowseHeader {
+    height: 40px;
+  }
+
+  /* line 109, ../sass/_tag_page.scss */
+  .tagBrowseHeaderBlock {
+    width: 33%;
+  }
+
+  /* line 113, ../sass/_tag_page.scss */
+  #tagBrowseAllMusic {
+    width: 34%;
+  }
+}
+@media only screen {
+  /* line 2, ../sass/_play_page.scss */
+  #playContent {
+    overflow: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* line 9, ../sass/_play_page.scss */
+  .verticalTrack {
+    margin-top: 50px;
+    width: 31%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+  }
+
+  /* line 17, ../sass/_play_page.scss */
+  .trackBlock {
+    width: 100%;
+    height: 150px;
+    background-color: #2d2f2d;
+    float: left;
+  }
+
+  /* line 24, ../sass/_play_page.scss */
+  .addBlock {
+    font-size: 70px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    line-height: 140px;
+    color: white;
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 721px) {
+  /* line 41, ../sass/_play_page.scss */
+  #playContent {
+    width: 650px;
+    margin: auto;
+  }
+}
+/* line 1, ../sass/_login_page.scss */
+body {
+  background-color: #050705;
+}
+
+/* line 5, ../sass/_login_page.scss */
+#loginHeader {
+  background-color: red;
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+/* line 3, ../sass/_leftPanel.scss */
+#leftPanelHead {
+  float: left;
+  height: 100px;
+  width: 266px;
+}
+
+/* line 9, ../sass/_leftPanel.scss */
+#leftPanelCenter {
+  float: left;
+  width: 266px;
+}
+
+/* line 14, ../sass/_leftPanel.scss */
+#leftPanelSearchDiv {
+  float: left;
+  width: 100%;
+}
+
+/* line 20, ../sass/_leftPanel.scss */
+#leftPanelForm {
+  left: 20px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+/* line 34, ../sass/_leftPanel.scss */
+.leftPanelListItem {
+  color: white;
+  background: #188a88;
+  margin: 1em 0;
+  text-align: center;
 }

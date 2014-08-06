@@ -8,7 +8,7 @@ var Combination = require('./combination.js');
  * @class StoredListSchema
  */
 var StoredListSchema = new Schema( {
-  name:                      { type: String, unique: true, lowercase: true},
+  name:                      { type: String, lowercase: true},
   created:                   { type: Date, default: Date.now},
   combinations:              { type: [Combination.CombinationSchema]}
 } );

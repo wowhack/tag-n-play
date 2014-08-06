@@ -10,16 +10,24 @@
   <body>
     <div class='snapDrawers'>
         <div class="snapDrawer snapDrawerLeft">
-          <div></div>
+          <div id='leftPanelHead'></div>
+          <div id="leftPanelSearchDiv">
+              <form id="leftPanelform">
+                <input type='search' id="leftPanelSearchbar">
+              </form>
+            </div> 
+          <div id='leftPanelCenter'>
+            <ul id="leftPanelList"></ul>
+          </div>
         </div>
         <div class="snapDrawer snapDrawerRight">
-          <div></div>
+            <a href="/auth/spotify">login with spotify</a>
         </div>
     </div>
     <div id='content'>
       <div id="header">
         <div id="toggleWrapper">
-          <div id="toggleButton" onclick="toggle_click()"></div>
+          <div id="toggleButton" onclick="toggle_click_left()"></div>
         </div>
         <div id="logoWrapper">
           <div id="logoType" class="notSelectable">Tag n'<br>play</div>
@@ -28,17 +36,59 @@
           <div id="tagMenuItem" class="menuItem notSelectable" onclick="mode_click(0)"><p onmouseover="mode_mouse_enter(0)" onmouseout="mode_mouse_leave(0)">Tag</p></div>
           <div id="playMenuItem" class="menuItem notSelectable" onclick="mode_click(1)"><p onmouseover="mode_mouse_enter(1)" onmouseout="mode_mouse_leave(1)">Play</p></div>
         </div>
+        <div id="toggleRightWrapper">
+          <div id="toggleButton" onclick="toggle_click_right()"></div>
+        </div>
       </div>
-      <div id="centerContainer">
-        <a href="/auth/spotify">login with spotify</a>
-        <div id='workspace'></div>
+      <div id="tagContainer">
+        <div id="tagBrowseContainer">
+          <div id="tagBrowseHeader">
+              <div id="tagBrowseYourMusic" class="tagBrowseHeaderBlock notSelectable" onclick="tag_browse_click(0)" onmouseover="tag_browse_mouse_enter(0)" onmouseout="tag_browse_mouse_leave(0)">
+                  Your Music
+              </div>
+              <div id="tagBrowseYourPlaylists" class="tagBrowseHeaderBlock notSelectable" onclick="tag_browse_click(1)" onmouseover="tag_browse_mouse_enter(1)" onmouseout="tag_browse_mouse_leave(1)">
+                  Your Playlists
+              </div>
+              <div id="tagBrowseAllMusic" class="tagBrowseHeaderBlock notSelectable" onclick="tag_browse_click(2)" onmouseover="tag_browse_mouse_enter(2)" onmouseout="tag_browse_mouse_leave(2)">
+                  All Music
+              </div>
+          </div>
+          <div id="tagBrowseContent">
+            <ul id="tagPageList"></ul>
+          </div>
+          <div id="tagBrowseFooter">
+              <form>
+                  <input type="text" id="tagSearch" onfocus="tag_search_focused()" onblur="tag_search_unfocused()"/>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div id="playContainer">
+          <div id="playContent">
+            <div class="verticalTrack">
+              <div class="trackBlock addBlock notSelectable">+</div>
+            </div>
+            <div class="verticalTrack">
+              <div class="trackBlock addBlock notSelectable">+</div>
+            </div>
+            <div class="verticalTrack">
+              <div class="trackBlock addBlock notSelectable">+</div>
+            </div>
+          </div>
       </div>
     </div>  
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/vendor/jquery.min.js"></script>
     <script src="/js/vendor/snap.js"></script>
+    <script src="/js/modules/songModule.js"></script>
+    <script src="/js/modules/playlistModule.js"></script>
+    <script src="/js/modules/combination.js"></script>
+    <script src="/js/modules/criteria.js"></script>
+    <script src="/js/populate.js"></script>
     <script src="/js/drawer.js"></script>
     <script src="/js/general.js"></script>
+    <script src="/js/leftPanel.js"></script>
+    <script src="/js/tagPage.js"></script>
   </body>
 </html>

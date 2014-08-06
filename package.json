@@ -6,7 +6,7 @@
   "repository": "",
   "author": "Sebastian Sandberg, Victor Larsson, Simon Arneson & Robin Sveningsson",
   "dependencies": {
-    "express": "latest",
+    "express": "~3.4.0",
     "ejs": "~0.8.5",
     "mongoose": "latest",
     "passport": "latest",

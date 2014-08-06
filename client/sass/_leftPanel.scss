@@ -1,0 +1,39 @@
+$panelWidth: 266px;
+
+#leftPanelHead {
+    float: left;
+    height: 100px;
+    width: $panelWidth;
+}
+
+#leftPanelCenter {
+    float: left;
+    width: $panelWidth;
+}
+
+#leftPanelSearchDiv{
+    float: left;
+    width: 100%;
+   // margin: 0 auto; 
+}
+
+#leftPanelForm {
+    left: 20px;
+    margin: 0 auto;   
+    width: 200px;
+}
+
+#leftPanelSearchbar {
+
+}
+
+#leftPanelList {
+    
+}
+
+.leftPanelListItem {
+    color: white;
+    background: #188a88;
+    margin: 1em 0;
+    text-align: center;
+}

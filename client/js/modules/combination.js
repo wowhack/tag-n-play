@@ -1,6 +1,7 @@
 var COMBINATION = (function() {
-    my.newCombination(c1,c2,typeOfComb){
-      return {criteria1:c1, criteria2:c2,type:typeOfComb};  
+  var my = {};
+    my.newCombination = function(c1,c2,typeOfComb){
+      return {criterias:[c1,c2],combinationType:typeOfComb};  
     };
     
     return my;
