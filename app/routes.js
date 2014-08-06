@@ -64,7 +64,7 @@ module.exports = function(app, passport){
                     var found = -1;
                     for(var i = 0; i<user.tags.length;i++){
                         if(user.tags[i].name==tagName){
-                            console.log(user.tags[i].name + " : " + tagName);
+                            //console.log(user.tags[i].name + " : " + tagName);
                             found = 1;
                             for(var j = 0;j<newSongs.length;j++){
                                 if(user.tags[i].songs.indexOf(newSongs[j])==-1){
@@ -161,6 +161,7 @@ module.exports = function(app, passport){
       //res.header("Access-Control-Allow-Headers", "X-Requested-With");
       var songs = [];
       var combinations = req.param('combinations');
+      //console.log("nu här: ",combinations);
       //console.log("combinations and crits: ",combinations[0].criterias[1]);
       if(combinations !== undefined && combinations.length>0){
         for(var i = 0; i<1;i++){

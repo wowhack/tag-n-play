@@ -65,7 +65,7 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
     var User = req.user;
     // console.log("This is user spotifyID" + User);
     var playlistID = req.user.playlistID;
-    console.log("outside: " + req.user.playlistID);
+    //console.log("outside: " + req.user.playlistID);
     var playListExist = -1;
     // spotifyApi.getPlaylist(req.user.spotifyID, playlistID)
     // .then(function(data){
@@ -101,7 +101,7 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
                                 user.save(function(err) {
                                         if (err)
                                             throw err;
-                                        console.log("successfully save playlistID");
+                                        //console.log("successfully save playlistID");
                                     });
                                     //res.send("success");
                             } else {
@@ -111,7 +111,7 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
                                 //             throw err;
                                 //         return done(null, newUser);
                                 //     });
-                                console.log("user not found in addTag");
+                                //console.log("user not found in addTag");
                                 
                             }
                         });
@@ -122,14 +122,14 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
                     .then(function(data){
                         res.send("success");
                     }, function(err){
-                        console.log("Something went wrong with CreatePlaylist().createPlaylist().setTracksToPlaylist", err);
+                        //console.log("Something went wrong with CreatePlaylist().createPlaylist().setTracksToPlaylist", err);
                     });
                 }, function(err){
-                    console.log("Something went wrong in createPLaylist", err);
+                    //console.log("Something went wrong in createPLaylist", err);
                 });
              }
              else{
-                 console.log("hä är de: ",songs);
+                 //console.log("hä är de: ",songs);
                 spotifyApi.setTracksToPlaylist(User.spotifyID, req.user.playlistID, {uris:songs})
                 .then(function(data){
                      spotifyApi.getPlaylist(req.user.spotifyID, req.user.playlistID).then(function(data){
@@ -140,7 +140,7 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
                      });
                     //return playlistID;
                 }, function(err){
-                    console.log("Something went wrong with CreatePlaylist().createPlaylist().setTracksToPlaylist", err);
+                    //console.log("Something went wrong with CreatePlaylist().createPlaylist().setTracksToPlaylist", err);
                 });
                  }
         });
@@ -176,7 +176,7 @@ module.exports.CreatePlaylist = function(songs, spotifyApi, req, res){
                 });
            
            
-           console.log(User.spotifyID+ ' : '+data.id + ' : '+[]);
+           //console.log(User.spotifyID+ ' : '+data.id + ' : '+[]);
            spotifyApi.setTracksToPlaylist(User.spotifyID, data.id, {uris:songs})
             .then(function(data){
                 // console.log("this is the data when setTracksToPlaylist is called", data);

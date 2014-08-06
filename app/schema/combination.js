@@ -17,6 +17,7 @@ var combine = function (combination,spotifyApi, req){
   var songs = [];
   var critsongs = [];
   //console.log("number of criterias: "+combination.criterias.length);
+  console.log("kolla här", combination);
   for(var i=0; i<combination.criterias.length;i++){
     var criteria = combination.criterias[i];
     //console.log("type: "+criteria.type);
@@ -51,15 +52,29 @@ var combine = function (combination,spotifyApi, req){
   console.log("combType: " + combination.combinationType);
   if(combination.combinationType == 'and'){
     for(var i=0;i<critsongs[0].length;i++){
-      if(critsongs[1].indexOf(critsongs[0][i])!=-1 && songs.indexOf(critsongs[0][i])==-1){
-        songs.push(critsongs[0][i]);
+      for(var k = 0; k<critsongs[1].length;k++){
+        if(critsongs[0][i] == critsongs[1][k]){
+          songs.push(critsongs[1][k]);
+        }
       }
     }
-    for(var i=0;i<critsongs[1].length;i++){
-      if(critsongs[0].indexOf(critsongs[1][i])!=-1 && songs.indexOf(critsongs[1][i])==-1){
-        songs.push(critsongs[1][i]);
-      }
-    }
+    // for(var i=0;i<critsongs[1].length;i++){
+    //   for(var k = 0; k<critsongs[0].length;k++){
+    //     if(critsongs[1][i] == critsongs[0][k]){
+    //       songs.push(critsongs[0][k]);
+    //     }
+    //   }
+    // }
+    // for(var i=0;i<critsongs[0].length;i++){
+    //   if(critsongs[1].indexOf(critsongs[0][i])!=-1 && songs.indexOf(critsongs[0][i])==-1){
+    //     songs.push(critsongs[0][i]);
+    //   }
+    // }
+    // for(var i=0;i<critsongs[1].length;i++){
+    //   if(critsongs[0].indexOf(critsongs[1][i])!=-1 && songs.indexOf(critsongs[1][i])==-1){
+    //     songs.push(critsongs[1][i]);
+    //   }
+    // }
   }
   else if(combination.combinationType == 'single'){
     console.log("Här är den 0 :",critsongs[0]);

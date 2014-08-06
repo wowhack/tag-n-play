@@ -574,3 +574,23 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+/* line 52, ../sass/_leftPanel.scss */
+#leftPanelSearchbar {
+  float: left;
+  width: 100%;
+  border: 0;
+  height: 20px;
+}
+
+/* line 59, ../sass/_leftPanel.scss */
+#addTagButton {
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  right: 0;
+  margin-left: 227px;
+  margin-top: 10px;
+}
