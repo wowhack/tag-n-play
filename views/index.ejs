@@ -12,16 +12,15 @@
         <div class="snapDrawer snapDrawerLeft">
           <div id='leftPanelHead'></div>
           <div id="leftPanelSearchDiv">
-              <form id="leftPanelform">
-                <input type='search' id="leftPanelSearchbar">
-              </form>
-            </div> 
+            <input type='text' id="leftPanelSearchbar">
+            <button type="submit" id="addTagButton" onClick="addTagToList()">Add</button>
+          </div> 
           <div id='leftPanelCenter'>
             <ul id="leftPanelList"></ul>
           </div>
         </div>
         <div class="snapDrawer snapDrawerRight">
-            <a href="/auth/spotify">login with spotify</a>
+            <div id="playlistPreview"></div>
         </div>
     </div>
     <div id='content'>
@@ -53,6 +52,7 @@
                   All Music
               </div>
           </div>
+          <div id="tagInfoWrapper" class="notSelectable"></div>
           <div id="tagBrowseContent">
             <ul id="tagPageList"></ul>
           </div>
@@ -64,15 +64,20 @@
         </div>
       </div>
       <div id="playContainer">
+          <div id="generateWrapper">
+            <div id="generatePlayListButton" class="notSelectable" onclick="generatePlaylist()"><p>Create Playlist</p></div>
+          </div>
           <div id="playContent">
-            <div class="verticalTrack">
-              <div class="trackBlock addBlock notSelectable">+</div>
+            <div id="vt1" class="verticalTrack">
+            <!--<div class="trackBlock contentBlock notSelectable" ondrop="drop(event)" ondragover="allowDrop(event)">Test1 - Test1</div>
+            <div class="trackBlock contentBlock notSelectable" draggable="true" ondragstart="drag(event)">asd - Hej</div>-->
+              <div class="trackBlock addBlock notSelectable" ondrop="drop(event)" ondragover="allowDrop(event)">+</div>
             </div>
-            <div class="verticalTrack">
-              <div class="trackBlock addBlock notSelectable">+</div>
+            <div id="vt2" class="verticalTrack">
+              <div class="trackBlock addBlock notSelectable" ondrop="drop(event)" ondragover="allowDrop(event)">+</div>
             </div>
-            <div class="verticalTrack">
-              <div class="trackBlock addBlock notSelectable">+</div>
+            <div id="vt3" class="verticalTrack">
+              <div class="trackBlock addBlock notSelectable" ondrop="drop(event)" ondragover="allowDrop(event)">+</div>
             </div>
           </div>
       </div>
@@ -85,10 +90,12 @@
     <script src="/js/modules/playlistModule.js"></script>
     <script src="/js/modules/combination.js"></script>
     <script src="/js/modules/criteria.js"></script>
+    <script src="/js/playPage.js"></script>
     <script src="/js/populate.js"></script>
     <script src="/js/drawer.js"></script>
     <script src="/js/general.js"></script>
     <script src="/js/leftPanel.js"></script>
     <script src="/js/tagPage.js"></script>
+    <script src="/js/dnd.js"></script>
   </body>
 </html>

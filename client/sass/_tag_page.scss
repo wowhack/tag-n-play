@@ -64,16 +64,12 @@
     #tagBrowseContent {
         float: left;
         width: 100%;
-        //background-color: yellow;
+        margin-left: 5%;
         overflow: auto;
     }
     
-    #tagPageList {
-        
-    }
-    
     .tagPageListItem {
-        margin: 10px 10px 10px 10px;   
+        margin: 10px;
         color: white;
         //background: #188a88;
         vertical-align: top;
@@ -81,15 +77,17 @@
         display: inline-block;
         padding: 5px;
         width: 27%;
-        border-style: solid;
-        border-color: gray;
-        border-width:3px;
+        //border-style: solid;
+        //border-color: gray;
+        //border-width:3px;
         //width: 50px;
-        @include border-radius(20px);
+        //@include border-radius(20px);
+        background-color: $fifth_background;
+        border-bottom: 5px solid $first_foreground;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
     }
-    .selected{
-        border-color: $first-foreground !important;
-    }
+    
     .tagPageListItemSpan{
         width:100%;
         float:left;

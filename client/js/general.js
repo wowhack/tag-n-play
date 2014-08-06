@@ -57,14 +57,16 @@ function position() {
     var tagBrowseContent = document.getElementById("tagBrowseContent");
     var tagBrowseHeader = document.getElementById("tagBrowseHeader");
     var tagBrowseFooter = document.getElementById("tagBrowseFooter");
+    var tagBrowseInfo = document.getElementById("tagInfoWrapper");
     var playContent = document.getElementById("playContent");
+    var playGenerate = document.getElementById("generateWrapper");
     
     if(window.innerHeight > 100){
         tagContainer.style.height = (window.innerHeight - header.offsetHeight) + "px";
         playContainer.style.height = (window.innerHeight - header.offsetHeight) + "px";
         leftPanelCenter.style.height = (window.innerHeight - header.offsetHeight) + "px";
-        tagBrowseContent.style.height = (window.innerHeight - header.offsetHeight - tagBrowseFooter.offsetHeight - tagBrowseHeader.offsetHeight) + "px";
-        playContent.style.height = (window.innerHeight - header.offsetHeight) + "px";
+        tagBrowseContent.style.height = (window.innerHeight - header.offsetHeight - tagBrowseFooter.offsetHeight - tagBrowseHeader.offsetHeight - tagBrowseInfo.offsetHeight) + "px";
+        playContent.style.height = (window.innerHeight - header.offsetHeight - playGenerate.offsetHeight - 50) + "px";
     }else{
         tagContainer.style.height = 0;
         playContainer.style.height = 0;

@@ -115,6 +115,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 
   /* line 46, ../sass/_layout.scss */
+  .selected {
+    background-color: red;
+  }
+
+  /* line 50, ../sass/_layout.scss */
   #header {
     width: 100%;
     height: 100px;
@@ -122,14 +127,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     z-index: 100;
   }
 
-  /* line 52, ../sass/_layout.scss */
+  /* line 56, ../sass/_layout.scss */
   #toggleWrapper {
     width: 40px;
     height: 100px;
     float: left;
   }
 
-  /* line 57, ../sass/_layout.scss */
+  /* line 61, ../sass/_layout.scss */
   #toggleRightWrapper {
     width: 40px;
     height: 100px;
@@ -138,7 +143,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     position: absolute;
   }
 
-  /* line 64, ../sass/_layout.scss */
+  /* line 68, ../sass/_layout.scss */
   #logoWrapper {
     width: 100px;
     height: 100px;
@@ -146,7 +151,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     text-align: center;
   }
 
-  /* line 70, ../sass/_layout.scss */
+  /* line 74, ../sass/_layout.scss */
   #menuWrapper {
     width: 50%;
     height: 100px;
@@ -154,7 +159,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin-right: 60px;
   }
 
-  /* line 76, ../sass/_layout.scss */
+  /* line 80, ../sass/_layout.scss */
   #logoType {
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
@@ -162,7 +167,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     padding-top: 30px;
   }
 
-  /* line 82, ../sass/_layout.scss */
+  /* line 86, ../sass/_layout.scss */
   .menuItem {
     height: 100px;
     width: 50%;
@@ -172,23 +177,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     float: left;
   }
 
-  /* line 90, ../sass/_layout.scss */
+  /* line 94, ../sass/_layout.scss */
   #tagMenuItem {
     float: left;
     text-align: right;
   }
 
-  /* line 94, ../sass/_layout.scss */
+  /* line 98, ../sass/_layout.scss */
   #tagMenuItem p {
     margin-right: 10px;
   }
 
-  /* line 97, ../sass/_layout.scss */
+  /* line 101, ../sass/_layout.scss */
   #playMenuItem p {
     margin-left: 10px;
   }
 
-  /* line 100, ../sass/_layout.scss */
+  /* line 104, ../sass/_layout.scss */
   #toggleButton {
     width: 40px;
     height: 40px;
@@ -200,7 +205,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     float: left;
   }
 
-  /* line 111, ../sass/_layout.scss */
+  /* line 115, ../sass/_layout.scss */
   .snapDrawerLeft {
     position: fixed;
     left: 0;
@@ -209,7 +214,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     background-color: #171917;
   }
 
-  /* line 121, ../sass/_layout.scss */
+  /* line 125, ../sass/_layout.scss */
   .snapDrawerRight {
     position: fixed;
     right: 0;
@@ -218,30 +223,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     z-index: 0;
     background-color: #171917;
   }
+
+  /* line 135, ../sass/_layout.scss */
+  #tagInfoWrapper {
+    float: left;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+  }
 }
 @media only screen and (min-width: 421px) {
-  /* line 134, ../sass/_layout.scss */
+  /* line 149, ../sass/_layout.scss */
   #tagMenuItem p {
     margin-right: 30px;
   }
 
-  /* line 137, ../sass/_layout.scss */
+  /* line 152, ../sass/_layout.scss */
   #playMenuItem p {
     margin-left: 30px;
   }
 
-  /* line 140, ../sass/_layout.scss */
+  /* line 155, ../sass/_layout.scss */
   #menuWrapper {
     width: 220px;
   }
 
-  /* line 143, ../sass/_layout.scss */
+  /* line 158, ../sass/_layout.scss */
   #logoWrapper {
     padding-left: 50px;
   }
 }
 @media only screen and (min-width: 721px) {
-  /* line 150, ../sass/_layout.scss */
+  /* line 165, ../sass/_layout.scss */
   #menuWrapper {
     position: absolute;
     left: 50%;
@@ -321,51 +338,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   #tagBrowseContent {
     float: left;
     width: 100%;
+    margin-left: 5%;
     overflow: auto;
   }
 
-  /* line 75, ../sass/_tag_page.scss */
+  /* line 71, ../sass/_tag_page.scss */
   .tagPageListItem {
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
     color: white;
     vertical-align: top;
     text-align: center;
     display: inline-block;
     padding: 5px;
     width: 27%;
-    border-style: solid;
-    border-color: gray;
-    border-width: 3px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
+    background-color: #2d2f2d;
+    border-bottom: 5px solid #ff5900;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
   }
 
-  /* line 90, ../sass/_tag_page.scss */
-  .selected {
-    border-color: #ff5900 !important;
-  }
-
-  /* line 93, ../sass/_tag_page.scss */
+  /* line 91, ../sass/_tag_page.scss */
   .tagPageListItemSpan {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 721px) {
-  /* line 105, ../sass/_tag_page.scss */
+  /* line 103, ../sass/_tag_page.scss */
   #tagBrowseHeader {
     height: 40px;
   }
 
-  /* line 109, ../sass/_tag_page.scss */
+  /* line 107, ../sass/_tag_page.scss */
   .tagBrowseHeaderBlock {
     width: 33%;
   }
 
-  /* line 113, ../sass/_tag_page.scss */
+  /* line 111, ../sass/_tag_page.scss */
   #tagBrowseAllMusic {
     width: 34%;
   }
@@ -377,26 +386,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 50px;
   }
 
-  /* line 9, ../sass/_play_page.scss */
+  /* line 10, ../sass/_play_page.scss */
   .verticalTrack {
     margin-top: 50px;
-    width: 31%;
-    margin-left: 1%;
-    margin-right: 1%;
+    width: 29%;
+    margin-left: 2%;
+    margin-right: 2%;
     float: left;
   }
 
-  /* line 17, ../sass/_play_page.scss */
+  /* line 18, ../sass/_play_page.scss */
   .trackBlock {
     width: 100%;
     height: 150px;
-    background-color: #2d2f2d;
     float: left;
   }
 
   /* line 24, ../sass/_play_page.scss */
+  .contentBlock {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    line-height: 140px;
+    color: white;
+    background-color: #2d2f2d;
+    border-bottom: 5px solid #ff5900;
+  }
+
+  /* line 34, ../sass/_play_page.scss */
   .addBlock {
     font-size: 70px;
     font-family: 'Lato', sans-serif;
@@ -404,10 +424,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     line-height: 140px;
     color: white;
     font-weight: bold;
+    background-color: #676967;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  /* line 47, ../sass/_play_page.scss */
+  #generateWrapper {
+    width: 100%;
+    float: left;
+  }
+
+  /* line 52, ../sass/_play_page.scss */
+  #generatePlayListButton {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    height: 40px;
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  /* line 69, ../sass/_play_page.scss */
+  #generatePlayListButton p:hover {
+    color: #AAACAA;
+    text-decoration: underline;
   }
 }
 @media only screen and (min-width: 721px) {
-  /* line 41, ../sass/_play_page.scss */
+  /* line 83, ../sass/_play_page.scss */
   #playContent {
     width: 650px;
     margin: auto;
@@ -420,10 +474,61 @@ body {
 
 /* line 5, ../sass/_login_page.scss */
 #loginHeader {
-  background-color: red;
   width: 100%;
-  height: 100px;
+  height: 200px;
   float: left;
+}
+
+/* line 11, ../sass/_login_page.scss */
+#loginLogoWrapper {
+  text-align: center;
+  height: 200px;
+  padding-top: 100px;
+}
+
+/* line 17, ../sass/_login_page.scss */
+#loginDescriptionWrapper {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+/* line 27, ../sass/_login_page.scss */
+#loginWithSpotifyWrapper {
+  float: left;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+/* line 34, ../sass/_login_page.scss */
+#loginWithSpotifyWrapper a {
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 43, ../sass/_login_page.scss */
+#loginWithSpotifyButtonWrapper {
+  background-color: #373937;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+  border: 1px solid #373937;
+  border-radius: 5px;
+  width: 180px;
+  position: absolute;
+  left: 50%;
+  margin-left: -111px;
 }
 
 /* line 3, ../sass/_leftPanel.scss */
@@ -454,8 +559,18 @@ body {
 
 /* line 34, ../sass/_leftPanel.scss */
 .leftPanelListItem {
+  margin: 10px;
   color: white;
-  background: #188a88;
-  margin: 1em 0;
+  vertical-align: top;
   text-align: center;
+  display: inline-block;
+  padding: 5px;
+  width: 90%;
+  background-color: #2d2f2d;
+  border-bottom: 5px solid #88A818;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }

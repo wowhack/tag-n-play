@@ -43,6 +43,10 @@
 		cursor: default;
     }
     
+    .selected {
+        background-color: red;
+    }
+    
     #header {
         width: 100%;
         height: $header_height;
@@ -126,6 +130,17 @@
         width: 266px;
         z-index: 0;
         background-color: $third_background;
+    }
+    
+    #tagInfoWrapper {
+        float: left;
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        font-family: 'Lato', sans-serif;
     }
 }
 
