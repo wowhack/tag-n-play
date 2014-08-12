@@ -1,0 +1,170 @@
+@media only screen {
+    html {
+        background-color: $first_background;
+    }
+    
+    body {
+        height: 100%;
+    }
+    
+    #content {
+        position: absolute;
+        
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background-color: $second_background;
+    }
+    
+    .snapDrawer {
+        z-index: 0;
+    }
+    
+    .snapDrawers {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    #playContainer {
+        width: 100%;
+        background-color: $second_background;
+        display: none;
+    }
+    
+    .notSelectable {
+        -webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor: default;
+    }
+    
+    .selected {
+        background-color: red;
+    }
+    
+    #header {
+        width: 100%;
+        height: $header_height;
+        background-color: $first_background;
+        z-index: 100;
+    }
+    #toggleWrapper {
+        width: 40px;
+        height: $header_height;
+        float: left;
+    }
+    #toggleRightWrapper {
+        width: 40px;
+        height: $header_height;
+        float: left;
+        right: 0;
+        position: absolute;
+    }
+    #logoWrapper {
+        width: $header_height;
+        height: $header_height;
+        float: left;
+        text-align: center;
+    }
+    #menuWrapper {
+        width: 50%;
+        height: $header_height;
+        float: right;
+        margin-right: 60px;
+    }
+    #logoType {
+        font-family: 'Dancing Script', cursive;
+        font-size: 20px;
+        color: $first_foreground;
+        padding-top: 30px;
+    }
+    .menuItem {
+        height: $header_height;
+        width: 50%;
+        line-height: $header_height;
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif;
+        float: left;
+    }
+    #tagMenuItem {
+        float: left;
+        text-align: right;
+    }
+    #tagMenuItem p {
+        margin-right: 10px;
+    }
+    #playMenuItem p {
+        margin-left: 10px;
+    }
+    #toggleButton {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/snapicon.png");
+        background-size: 30px 30px;
+        background-position: 5px 5px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        float: left;
+    }
+    
+    .snapDrawerLeft {
+        position: fixed;
+        //display: none;
+        left: 0;
+        height: 100%;
+        width: 266px;
+        // z-index: 0;
+        background-color: $third_background;
+    }
+    
+    .snapDrawerRight{
+        position: fixed;
+        //display: none;
+        right: 0;
+        height: 100%;
+        width: 266px;
+        z-index: 0;
+        background-color: $third_background;
+    }
+    
+    #tagInfoWrapper {
+        float: left;
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        font-family: 'Lato', sans-serif;
+    }
+}
+
+@media only screen
+and (min-width: 421px) {
+    #tagMenuItem p {
+        margin-right: 30px;
+    }
+    #playMenuItem p {
+        margin-left: 30px;
+    }
+    #menuWrapper {
+        width: 220px;
+    }
+    #logoWrapper {
+        padding-left: 50px;
+    }
+}
+
+@media only screen
+and (min-width: 721px) {
+    #menuWrapper {
+        position: absolute;
+        left: 50%;
+        margin-left: -110px;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "tag-n-play",
+  "version": "0.0.0",
+  "description": "An app to custom tag your songs and create a dynamic playlists",
+  "main": "server.js",
+  "repository": "",
+  "author": "Sebastian Sandberg, Victor Larsson, Simon Arneson & Robin Sveningsson",
+  "dependencies": {
+    "express": "~3.4.0",
+    "ejs": "~0.8.5",
+    "mongoose": "latest",
+    "passport": "latest",
+    "passport-spotify": "latest",
+    "spotify-web-api-node": "latest",
+    "connect-flash": "~0.1.1",
+    "bcrypt-nodejs": "latest",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-session": "~1.0.0",
+    "util": "latest",
+    "yarm": "latest",
+    "mongodb": "latest"
+  }
+}

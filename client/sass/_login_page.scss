@@ -1,0 +1,56 @@
+body {
+    background-color: $first_background;
+}
+
+#loginHeader {
+    width: 100%;
+    height: 200px;
+    float: left;
+}
+
+#loginLogoWrapper {
+    text-align: center;
+    height: 200px;
+    padding-top: 100px;
+}
+
+#loginDescriptionWrapper {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+#loginWithSpotifyWrapper {
+    float: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+#loginWithSpotifyWrapper a {
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#loginWithSpotifyButtonWrapper {
+    background-color: $second_background;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: left;
+    border: 1px solid $second_background;
+    border-radius: 5px;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    margin-left: -111px;
+}
