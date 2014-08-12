@@ -1,7 +1,7 @@
 Tag-N-Play
 ==============
 
-A webapp to create and associate tags to your music, and create playlists using these tags. Tag-N-Play was first created during wowhack2014 at Spotify 
+A webapp to create and associate tags to your music on Spotify, and create playlists on your Spotify account using these tags. Tag-N-Play was first created during wowhack2014 at Spotify 
 
 ## Tag
 
@@ -14,4 +14,5 @@ Create a playlist using the tags. The tags can be used to create the playlist us
 * This tag OR that tag
 * This tag AND that tag
 
+Runs on node, using express, mongodb, passport and spotify web-api-node
 
